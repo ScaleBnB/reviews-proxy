@@ -1,3 +1,3 @@
-# DonChenProxy
+# RecommendationsProxy
 
-DonChenProxy
+RecommendationsProxy
