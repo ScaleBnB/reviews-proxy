@@ -3,6 +3,8 @@ const express = require('express');
 const morgan = require('morgan');
 const app = express();
 const port = 3004;
+require('newrelic');
+
 
 app.use(morgan('dev')); // for logging http requests to the terminal
 app.use(express.json()); // for parsing application/json
