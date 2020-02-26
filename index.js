@@ -60,7 +60,7 @@ app.use(express.static('public')); // for serving static files
 
 // Create / POST - create a new item
 app.post(`/properties/:propertyID/reviews`, (req, res) => {
-  axios.post(`http://localhost:3003/properties/${req.params.propertyID}/reviews`, req.body)
+  axios.post(`18.144.87.134:3003/properties/${req.params.propertyID}/reviews`, req.body)
   .then((response) => {
     res.send(response.data);
   })
@@ -70,7 +70,7 @@ app.post(`/properties/:propertyID/reviews`, (req, res) => {
 });
 // Read / GET - get all reviews of a given property
 app.get(`/properties/:propertyID/reviews`, (req, res) => {
-  axios.get(`http://localhost:3003/properties/${req.params.propertyID}/reviews`)
+  axios.get(`18.144.87.134:3003/properties/${req.params.propertyID}/reviews`)
   .then((response) => {
     res.json(response.data);
   })
@@ -81,7 +81,7 @@ app.get(`/properties/:propertyID/reviews`, (req, res) => {
 
 // Delete / DELETE - delete a review of a given property
 app.delete('/properties/:propertyID/reviews', (req, res) => {
-  axios.delete(`http://localhost:3003/properties/${req.params.propertyID}/reviews/?reviewID=${req.query.reviewID}`)
+  axios.delete(`18.144.87.134:3003/properties/${req.params.propertyID}/reviews/?reviewID=${req.query.reviewID}`)
   .then((response) => {
     res.json(response.data);
   })
@@ -92,7 +92,7 @@ app.delete('/properties/:propertyID/reviews', (req, res) => {
 
 // Put / DELETE - delete a host response
 app.put('/properties/:propertyID/replies', (req, res) => {
-  axios.put(`http://localhost:3003/properties/${req.params.propertyID}/replies/?reviewID=${req.query.reviewID}`, req.body)
+  axios.put(`18.144.87.134:3003/properties/${req.params.propertyID}/replies/?reviewID=${req.query.reviewID}`, req.body)
   .then((response) => {
     res.send(response.data);
   })
@@ -103,7 +103,7 @@ app.put('/properties/:propertyID/replies', (req, res) => {
 
 // Update / PUT - update an item based on query
 app.put('/properties/:propertyID/reviews', (req, res) => {
-  axios.put(`http://localhost:3003/properties/${req.params.propertyID}/reviews?reviewID=${req.query.reviewID}`, req.body)
+  axios.put(`18.144.87.134:3003/properties/${req.params.propertyID}/reviews?reviewID=${req.query.reviewID}`, req.body)
   .then((response) => {
     res.send(response.data);
   })
