@@ -3,7 +3,7 @@ const express = require('express');
 const morgan = require('morgan');
 const app = express();
 const port = 3004;
-require('newrelic');
+// require('newrelic');
 
 const service = 'http://18.144.87.134:3003';
 
